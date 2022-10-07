@@ -1,4 +1,11 @@
-﻿System.Console.Write("Please enter your name:");
+﻿string password = "";
+do
+{
+    System.Console.WriteLine("Enter the Password:");
+    password = Console.ReadLine();
+}while(password != "12344321");
+
+System.Console.Write("Please enter your name:");
 string name = Console.ReadLine();
 string greeting = $" Hello, {name} my name is Kescha";
 System.Console.WriteLine(greeting);

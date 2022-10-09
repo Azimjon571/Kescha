@@ -17,17 +17,6 @@ int age = Convert.ToInt32(Console.ReadLine());
 
 Animal kescha =new Animal(name: "KESCHA", age, animalAge:5); 
 
-System.Console.WriteLine($"The difference between your and Keschas age is {kescha.AgeDifference}.");
-
-if(age > kescha.Age)
-{
-    System.Console.WriteLine("You are older than KESCHA");
-}
-else if(age == kescha.Age)
-{
-    System.Console.WriteLine("You are equal.");
-}
-else if(age<kescha.Age)
-{
-   System.Console.WriteLine("KESCHA older then you."); 
-}
+kescha.PrintAgeDifference();
+kescha.CompareAges(userAge: age);
+kescha.TellAboutFriends(userName: NName);

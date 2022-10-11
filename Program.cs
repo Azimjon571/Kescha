@@ -1,5 +1,7 @@
 ﻿using KESCHA.Classes;
 
+Animal kescha =new Animal(name: "KESCHA",  age:5);
+
 string password = "";
 do
 {
@@ -8,15 +10,14 @@ do
 }while(password != "12344321");
 
 System.Console.Write("Please enter your name:");
-string NName = Console.ReadLine();
-string greeting = $" Hello, {NName} my name is Kescha";
-System.Console.WriteLine(greeting);
+string userName = Console.ReadLine();
+kescha.Greeting(userName);
 
 System.Console.Write("Enter your age: ");
-int age = Convert.ToInt32(Console.ReadLine());
+int userAge = Convert.ToInt32(Console.ReadLine());
 
-Animal kescha =new Animal(name: "KESCHA", age, animalAge:5); 
 
+kescha.CalculateAgerDifferenceWithNoReturn(userAge);
 kescha.PrintAgeDifference();
-kescha.CompareAges(userAge: age);
-kescha.TellAboutFriends(userName: NName);
+kescha.CompareAges(userAge);
+kescha.TellAboutFriends(userName, userAge);

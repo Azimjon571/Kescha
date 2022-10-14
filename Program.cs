@@ -16,7 +16,7 @@ System.Console.WriteLine(greeting);
 System.Console.Write("Enter your age: ");
 int userAge = Convert.ToInt32(Console.ReadLine());
 
-
+kescha.CalculateAgerDifferenceWithNoReturn(userAge);
 kescha.PrintAgeDifference();
 kescha.CompareAges(userAge);
 kescha.TellAboutFriends(userName, userAge);

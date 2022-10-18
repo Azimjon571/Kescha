@@ -22,5 +22,10 @@ namespace Kescha.Classes
             }
             Console.WriteLine($"Hello {userName} my name is Kescha");
         }
+
+        public override void Greeting2(string userName)
+        {
+            Console.Write(" This is Abstact Method");
+        }
     }
 }

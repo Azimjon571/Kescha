@@ -1,22 +1,27 @@
-﻿using KESCHA.Classes;
-Animal kescha =new Animal(name: "KESCHA", age:5); 
-
-string password = "";
-do
+﻿
+using System;
+using Kescha.Classes;
+using KESCHA.Classes;
+internal class Program
 {
-    System.Console.WriteLine("Enter the Password:");
-    password = Console.ReadLine();
-}while(password != "12344321");
+    private static void Main(string[] args)
+    {
+        Bird kescha = new Bird(name: "KESCHA", age: 5);
+        Pet kasee = new Pet(name: "Kasee", age: 7);
+        kescha.Password();
+        Console.Write("Please enter your name:");
+        string userName = Console.ReadLine();
+        
+        kescha.Greeting(userName);
 
-System.Console.Write("Please enter your name:");
-string userName = Console.ReadLine();
-string greeting = $" Hello, {userName} my name is Kescha";
-System.Console.WriteLine(greeting);
+        kasee.Greeting(userName);
 
-System.Console.Write("Enter your age: ");
-int userAge = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Enter your age: ");
+        int userAge = Convert.ToInt32(Console.ReadLine());
 
-kescha.CalculateAgerDifferenceWithNoReturn(userAge);
-kescha.PrintAgeDifference();
-kescha.CompareAges(userAge);
-kescha.TellAboutFriends(userName, userAge);
+        kescha.CalculateAgerDifferenceWithNoReturn(userAge);
+        kescha.PrintAgeDifference();
+        kescha.CompareAges(userAge);
+        kescha.TellAboutFriends(userName, userAge);
+    }
+}

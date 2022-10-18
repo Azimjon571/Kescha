@@ -1,6 +1,6 @@
 namespace KESCHA.Classes
 {
-    class Animal
+    public class Animal
     {
         public string Name { get; set; }
         public int Age {get; set; }
@@ -29,13 +29,23 @@ namespace KESCHA.Classes
             CalculateAgerDifference( userAge, animalAge);
         }
 
-        public void Greeting(string userName)
+        public void Password()
+        {
+            string password = "";
+                do
+                {
+                    System.Console.WriteLine("Enter the Password:");
+                    password = Console.ReadLine();
+                }while(password != "12344321");
+        }
+
+           public virtual void Greeting(string userName)
         {
             if (userName== "")
             {
                 userName = "Unknown person";
             }
-            Console.WriteLine($" Hello, {userName} my name is Kescha");
+            Console.WriteLine($" Hello, {userName} my name is {Name}");
         }
         public void PrintAgeDifference()
         {

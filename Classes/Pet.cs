@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using KESCHA.Classes;
+using KESCHA.Enums;
 
 namespace Kescha.Classes
 {
     public class Pet : Animal
     {
+        public PetType Type { get; set; }
         public Pet(string name, int age)
         : base(name, age){}
         

@@ -9,17 +9,20 @@ namespace Kescha.Classes
     public class Pet : Animal
     {
         public Pet(string name, int age)
-        : base(name, age)
-        {
-            
-        }
+        : base(name, age){}
+        
         public override void Greeting(string userName)
         {
             if (userName== "")
             {
                 userName = "Unknown person";
             }
-            System.Console.WriteLine($"Meow {userName} my name is Kasee");
+            Console.WriteLine($"Meow {userName} my name is Kasee");
+        }
+
+        public override void Greeting2(string userName)
+        {
+            Console.WriteLine(" This is Abstact Method,");
         }
     }
 }

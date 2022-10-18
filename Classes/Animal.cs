@@ -1,11 +1,10 @@
 namespace KESCHA.Classes
 {
-    public class Animal
+    public abstract class Animal
     {
-        public string Name { get; set; }
-        public int Age {get; set; }
-
-        public int AgeDifference { get; set; }
+        protected string Name { get; set; }
+        protected int Age {get; set; }
+        internal int AgeDifference { get; set; }
 
         public Animal()
         {
@@ -28,7 +27,8 @@ namespace KESCHA.Classes
             Age=animalAge;
             CalculateAgerDifference( userAge, animalAge);
         }
-
+        
+        public abstract void Greeting2(string userName);
         public void Password()
         {
             string password = "";
